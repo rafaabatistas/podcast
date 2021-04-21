@@ -1,6 +1,16 @@
 import { GetStaticProps } from 'next';
 
-export default function Home(props) {
+type Episode = {
+  id: string;
+  title: string;
+  members: string;
+}
+
+type HomeProps = {
+  episodes: Episode[];
+}
+
+export default function Home(props: HomeProps) {
   return (
     <div>
       <h1>Index</h1>
