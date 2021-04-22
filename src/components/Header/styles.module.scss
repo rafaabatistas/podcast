@@ -1,18 +1,19 @@
 .headerContainer {
-    background-color: var(--white);
+    background-color: var(--gray-900);
     height: 6.5rem;
+    color: var(--white);
 
     display: flex;
     align-items: center;
 
     padding: 2rem 4rem;
 
-    border-bottom: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--white);
 
     p {
         margin-left: 2rem;
         padding: 0.25rem 0 0.25rem 2rem;
-        border-left: 1px solid var(--gray-200);
+        border-left: 1px solid var(--white);
     }
 
     span {
