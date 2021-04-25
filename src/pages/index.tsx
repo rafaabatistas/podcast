@@ -62,18 +62,20 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
 
           <table cellSpacing={0} >
             <thead>
-              <th></th>
-              <th>Podcast</th>
-              <th>Integrantes</th>
-              <th>Data</th>
-              <th>Duração</th>
-              <th></th>
+              <tr>
+                <th></th>
+                <th>Podcast</th>
+                <th>Integrantes</th>
+                <th>Data</th>
+                <th>Duração</th>
+                <th></th>
+              </tr>
             </thead>
 
             <tbody>
               {allMusics.map(episode => {
                 return (
-                  <tr>
+                  <tr key={episode.id}>
                     <td>
                       <Image
                       width={120}
