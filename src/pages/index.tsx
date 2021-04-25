@@ -40,7 +40,7 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
                   alt={episode.title} 
                   objectFit="cover"
                 />
-                
+
                 <div className={styles.episodeDetails}>
                   <a href="">{episode.title}</a>
                   <p>{episode.members}</p>
@@ -58,9 +58,47 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
       </section>
       
       <section className={styles.allMusics}>
-          {allMusics.map(episode => {
-            return episode.description
-          })}
+          <h2>Todos episódios</h2>
+
+          <table cellSpacing={0} >
+            <thead>
+              <th></th>
+              <th>Podcast</th>
+              <th>Integrantes</th>
+              <th>Data</th>
+              <th>Duração</th>
+              <th></th>
+            </thead>
+
+            <tbody>
+              {allMusics.map(episode => {
+                return (
+                  <tr>
+                    <td>
+                      <Image
+                      width={120}
+                      height={120}
+                      src={episode.thumbnail}
+                      alt={episode.title}
+                      objectFit="cover" 
+                      />
+                    </td>
+                    <td>
+                      <a href="">{episode.title}</a>
+                      </td>
+                    <td className={styles.memberEpisode}>{episode.members}</td>
+                    <td className={styles.dataEpisode}>{episode.publishedAt}</td>
+                    <td>{episode.durationAsString}</td>
+                    <td>
+                      <button type="button">
+                        <img src="/play-green.svg" alt="Tocar episódio"/>
+                      </button>
+                    </td>
+                  </tr>
+                  )
+              })}
+            </tbody>
+          </table>
       </section>
     </div>
   )
@@ -81,7 +119,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: episode.title,
       thumbnail: episode.thumbnail,
       members: episode.members,
-      publishedAt: format(parseISO(episode.published_at), 'EEEEEEd MMM yy', {
+      publishedAt: format(parseISO(episode.published_at), 'd MMM yy', {
         locale: ptBR
       }),
       duration: Number(episode.file.duration),
