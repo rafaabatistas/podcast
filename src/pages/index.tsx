@@ -40,12 +40,14 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
                   alt={episode.title} 
                   objectFit="cover"
                 />
+                
                 <div className={styles.episodeDetails}>
                   <a href="">{episode.title}</a>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
                 </div>
+
                 <button type="button">
                   <img src="/play-green.svg" alt="Tocar Episodio"/>
                 </button>
@@ -56,7 +58,9 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
       </section>
       
       <section className={styles.allMusics}>
-
+          {allMusics.map(episode => {
+            return episode.description
+          })}
       </section>
     </div>
   )
