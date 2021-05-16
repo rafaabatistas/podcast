@@ -1,7 +1,8 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import { format, parseISO }  from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR'
+import ptBR from 'date-fns/locale/pt-BR';
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertionDurationToTimeString';
 
@@ -42,7 +43,9 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
                 />
 
                 <div className={styles.episodeDetails}>
-                  <a href="">{episode.title}</a>
+                  <Link href={`/episodes/${episode.id}`}>
+                    <a>{episode.title}</a>
+                  </Link>
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
@@ -86,7 +89,9 @@ export default function Home({latestMusics, allMusics}: HomeProps) {
                       />
                     </td>
                     <td>
-                      <a href="">{episode.title}</a>
+                      <Link href={`/episodes/${episode.id}`}>
+                        <a>{episode.title}</a>
+                      </Link>
                       </td>
                     <td className={styles.memberEpisode}>{episode.members}</td>
                     <td className={styles.dataEpisode}>{episode.publishedAt}</td>
