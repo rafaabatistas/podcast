@@ -4,6 +4,6 @@ type NavItemProp = {
   children: React.ReactNode;
 }
 
-export function NavItem({children}: NavItemProp){
+export const NavItem = ({children}: NavItemProp) => {
   return <p className={styles.navItem}>{children}</p>
  }

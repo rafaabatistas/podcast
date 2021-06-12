@@ -1,7 +1,7 @@
 import '../styles/global.scss';
 
-import { Header } from '../components/organisms/Header';
-import { Player } from '../components/organisms/Player';
+import { Header } from '../components/organisms/Header/Header';
+import { Player } from '../components/organisms/Player/Player';
 
 import styles from '../styles/app.module.scss';
 
