@@ -1,0 +1,52 @@
+.card_details {
+  flex: 1;
+  width: 2rem;
+  margin-left: 1rem;
+
+  > .title {
+    display: block;
+    color: var(--gray-700);
+    font-size: 0.8rem;
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  > .members {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  span {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+
+    &:last-child {
+      margin-left: 0.5rem;
+      padding-left: 0.5rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background: #ddd;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
