@@ -1,7 +1,7 @@
-import LatestEpisodeContextProviders from '../EpisodeContext';
+import LatestEpisodeContextProviders from '../LatestEpisodeContext';
 import AllEpisodeContextProviders from '../AllEpisodeContext';
 
-import type { EpisodeContextProps } from '../EpisodeContext';
+import type { EpisodeContextProps } from '../LatestEpisodeContext';
 
 const Proveiders = ({ children }: EpisodeContextProps) => {
   return (
