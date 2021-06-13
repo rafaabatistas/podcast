@@ -1,0 +1,14 @@
+.heading {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-100);
+  padding: 1.25rem;
+  border: 1.25rem;
+  position: relative;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+  }
+}
