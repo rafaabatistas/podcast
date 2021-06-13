@@ -1,0 +1,24 @@
+.play_button {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  right: 2rem;
+  bottom: 2rem;
+
+  background: transparent;
+  border: 1px solid var(--gray-800);
+  border-radius: 0.675rem;
+  font-size: 0;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--gray-800);
+  }
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
