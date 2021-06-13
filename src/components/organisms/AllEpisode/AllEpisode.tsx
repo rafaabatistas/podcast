@@ -18,6 +18,7 @@ export const AllEpisode = () => {
           {allEpisodeList.map(episode => {
             return (
               <RowsTableHome
+                key={episode.id}
                 id={episode.id}
                 thumbnail={episode.thumbnail}
                 title={episode.title}

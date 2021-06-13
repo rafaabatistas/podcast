@@ -14,7 +14,7 @@ export const RowsTableHome = ({
   durationAsString,
 }: Episode) => {
   return (
-    <tr className={styles.episode_details}>
+    <tr className={styles.episode_details} key={id}>
       <td>
         <Image
           width={120}

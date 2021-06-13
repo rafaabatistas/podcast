@@ -15,15 +15,17 @@ export const LatestEpisode = () => {
       <section className={styles.card}>
         {latestEpisodeList.map(episode => {
           return (
-            <Card thumbnail={episode.thumbnail} title={episode.title}>
-              <DescriptionLatestEpisode
-                id={episode.id}
-                title={episode.title}
-                members={episode.members}
-                publishedAt={episode.publishedAt}
-                durationAsString={episode.durationAsString}
-              />
-            </Card>
+            <div key={episode.id}>
+              <Card thumbnail={episode.thumbnail} title={episode.title}>
+                <DescriptionLatestEpisode
+                  id={episode.id}
+                  title={episode.title}
+                  members={episode.members}
+                  publishedAt={episode.publishedAt}
+                  durationAsString={episode.durationAsString}
+                />
+              </Card>
+            </div>
           );
         })}
       </section>
