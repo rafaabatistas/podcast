@@ -1,10 +1,11 @@
 import styles from './styles.module.scss';
 
-import type { Episode } from '../../../types/Episode';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { ButtonPlayGreen } from '../../atoms/ButtonPlayGreen/ButtonPlayGreen';
+
+import type { Episode } from '../../../types/Episode';
 export const RowsTableHome = ({
   id,
   thumbnail,
@@ -34,9 +35,7 @@ export const RowsTableHome = ({
       <td className={styles.dataEpisode}>{publishedAt}</td>
       <td>{durationAsString}</td>
       <td>
-        <button type="button" className={styles.play_button}>
-          <img src="/play-green.svg" alt="Tocar Episodio" />
-        </button>
+        <ButtonPlayGreen />
       </td>
     </tr>
   );
