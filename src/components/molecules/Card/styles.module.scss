@@ -11,4 +11,18 @@
     height: 6rem;
     border-radius: 1rem;
   }
+
+  > button {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+  
+    right: 2rem;
+    bottom: 2rem;
+    
+    > img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
